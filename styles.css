@@ -232,3 +232,13 @@ body.dark-page .ridge svg path{fill:#1C2B37}
    berry #D1495B button, dark background, light text. */
 .signup-form.kit-embed{display:block;max-width:520px;margin:36px auto 0}
 .signup-form.kit-embed .formkit-form{background:transparent!important}
+
+/* hero split layout with large logo mark */
+.hero-split{display:flex;align-items:center;gap:56px;justify-content:space-between}
+.hero-text{flex:1;min-width:0}
+.hero-logo{flex-shrink:0;width:340px}
+.hero-logo img{width:100%;height:auto;opacity:.94}
+@media (max-width:900px){
+  .hero-split{flex-direction:column;align-items:flex-start;gap:32px}
+  .hero-logo{width:200px;order:-1;align-self:center}
+}
