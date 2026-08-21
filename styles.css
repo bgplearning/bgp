@@ -23,7 +23,7 @@ html{scroll-behavior:smooth}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
 body{font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;color:var(--ink);background:var(--paper)}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
