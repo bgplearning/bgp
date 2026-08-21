@@ -6,7 +6,7 @@
 :root{
   --ink:#003D5B; --ink-soft:#30638E;
   --paper:#FBF9F4; --paper-mid:#F0EBE0;
-  --berry:#D1495B; --gold:#EDAE49; --teal:#00798C;
+  --berry:#D1495B; --berry-a11y:#CE3D50; --gold:#EDAE49; --teal:#00798C;
   --line:#D8D0C0;
   --font-display:'Bricolage Grotesque',sans-serif;
   --font-body:'Source Serif 4',Georgia,serif;
@@ -14,6 +14,9 @@
   --w:1100px; --w-text:680px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
+/* skip link for keyboard users — visually hidden until focused */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--ink);color:var(--paper);font-family:var(--font-display);font-weight:600;padding:12px 20px;border-radius:0 0 6px 0;text-decoration:none}
+.skip-link:focus{left:0}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -22,6 +25,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;color:var(--ink);background:var(--paper)}
 img{max-width:100%;display:block}
 a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
 .eyebrow{font-family:var(--font-mono);font-size:1rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:14px}
 .dark .eyebrow{color:var(--gold)}
@@ -44,7 +48,7 @@ span.todo{display:inline-block}
 .dots{display:flex;gap:8px;margin:18px 0;align-items:center}
 .dots i{width:12px;height:12px;border-radius:50%;display:block}
 .dots.lg i{width:16px;height:16px}
-.dots.sm i{width:8px;height:8px;gap:6px}
+.dots.sm i{width:8px;height:8px}
 .dots.center{justify-content:center;margin:32px auto}
 .dots i:nth-child(1){background:var(--teal)}
 .dots i:nth-child(2){background:var(--berry)}
@@ -56,7 +60,7 @@ span.todo{display:inline-block}
 .btn{display:inline-block;font-family:var(--font-display);font-weight:600;font-size:1rem;text-decoration:none;padding:14px 28px;border-radius:6px;border:2px solid transparent;cursor:pointer;transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s ease}
 .btn:hover{transform:translateY(-3px) rotate(-.5deg);box-shadow:0 8px 18px rgba(0,61,91,.22)}
 .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.btn-primary{background:var(--berry);color:var(--paper)}
+.btn-primary{background:var(--berry-a11y);color:var(--paper)}
 .btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
 .dark .btn-ghost{border-color:var(--paper);color:var(--paper)}
 
@@ -65,7 +69,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,249,244,.93);backdro
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:var(--w);margin:0 auto}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:1.15rem;text-decoration:none;letter-spacing:-.01em}
 .logo img{height:44px;width:auto}
-.logo span{color:var(--berry)}
+.logo span{color:var(--berry-a11y)}
 .nav-links{display:flex;gap:22px;list-style:none;align-items:center}
 .nav-links a{font-family:var(--font-display);font-weight:600;font-size:.9rem;text-decoration:none;opacity:.85;padding:6px 2px;border-bottom:3px solid transparent}
 .nav-links a:hover{opacity:1}
@@ -79,11 +83,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,249,244,.93);backdro
 
 /* page hero (interior pages) */
 .page-hero{padding:72px 0 40px;position:relative;overflow:hidden}
-.page-hero h1{max-width:14em}
 /* home hero */
 .hero{position:relative;padding:96px 0 150px;overflow:hidden}
 .hero-inner{max-width:var(--w);margin:0 auto;padding:0 24px;position:relative;z-index:3}
-.hero h1{font-size:clamp(2.7rem,6vw,4rem);max-width:12.5em}
+.hero h1{font-size:clamp(2.7rem,6vw,4rem)}
 .hero h1 em{font-style:normal;color:var(--berry)}
 .hero .lede{font-size:1.25rem}
 .hero-ctas{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap}
@@ -106,6 +109,7 @@ section.band.dark{background:var(--ink);color:var(--paper)}
 .cred-item .big{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--gold);display:block;line-height:1.1}
 .cred-item .small{font-size:.92rem;opacity:.85;margin-top:6px;display:block}
 .cred-item a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
 @media (max-width:800px){.cred-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* service grid */
@@ -135,7 +139,7 @@ section.band.dark{background:var(--ink);color:var(--paper)}
 .card-body .tag{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
 .card-body h3{font-size:1.15rem}
 .card-body p{font-size:.92rem;opacity:.88}
-.card-body .card-link{margin-top:auto;font-family:var(--font-display);font-weight:600;font-size:.88rem;color:var(--berry);text-decoration:none}
+.card-body .card-link{margin-top:auto;font-family:var(--font-display);font-weight:600;font-size:.88rem;color:var(--berry-a11y);text-decoration:none}
 .card-body .card-link:hover{text-decoration:underline}
 @media (max-width:900px){.card-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.card-grid,.card-grid.two{grid-template-columns:1fr}}
@@ -169,32 +173,36 @@ section.band.dark{background:var(--ink);color:var(--paper)}
 .signup h2{margin:0 auto}
 .signup .lede{margin:18px auto 0}
 .signup-form{margin:36px auto 0;display:flex;gap:12px;max-width:520px;flex-wrap:wrap;justify-content:center}
-.signup-form input[type=email]{flex:1;min-width:240px;font-family:var(--font-body);font-size:1rem;padding:14px 18px;border:2px solid var(--ink);border-radius:6px;background:var(--paper);color:var(--ink)}
-.signup-form input[type=email]:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.signup-form input[type="email"]{flex:1;min-width:240px;font-family:var(--font-body);font-size:1rem;padding:14px 18px;border:2px solid var(--ink);border-radius:6px;background:var(--paper);color:var(--ink)}
+.signup-form input[type="email"]:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .signup .consent{margin-top:18px;font-size:.85rem;opacity:.75;display:flex;gap:10px;align-items:flex-start;justify-content:center;max-width:480px;margin-left:auto;margin-right:auto;text-align:left}
 .signup .consent input{margin-top:4px}
 
 /* footer */
 footer{background:var(--ink);color:var(--paper);padding:56px 0 40px;margin-top:0}
 .foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.foot-brand p{font-size:.88rem;opacity:.7;margin-top:10px;max-width:26em}
+.foot-brand p{font-size:.88rem;opacity:.8;margin-top:10px;max-width:26em}
 .foot-links{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
-.foot-links a{font-size:.9rem;opacity:.8;text-decoration:none}
+.foot-links a{font-size:.9rem;opacity:.88;text-decoration:none}
 .foot-links a:hover{opacity:1}
-.foot-legal{margin-top:36px;padding-top:24px;border-top:1px solid rgba(251,249,244,.15);font-size:.8rem;opacity:.6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.foot-legal{margin-top:36px;padding-top:24px;border-top:1px solid rgba(251,249,244,.15);font-size:.8rem;opacity:.78;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 /* prose blocks (detail pages) */
 .prose{max-width:var(--w-text);margin-top:32px}
 .prose p{margin-bottom:18px}
 .prose h2{font-size:1.5rem;margin:36px 0 14px}
-.backlink{font-family:var(--font-display);font-weight:600;font-size:.9rem;text-decoration:none;color:var(--berry)}
+.backlink{font-family:var(--font-display);font-weight:600;font-size:.9rem;text-decoration:none;color:var(--berry-a11y)}
 
+
+/* keyboard focus for lightbox trigger images */
+.card-thumb img:focus-visible,[data-lightbox]:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 
 /* lightbox (site-wide, for any .card-thumb / feature image marked data-lightbox) */
 .lightbox-overlay{position:fixed;inset:0;background:rgba(0,25,37,.92);z-index:999;display:none;align-items:center;justify-content:center;padding:40px;cursor:zoom-out}
 .lightbox-overlay.open{display:flex}
 .lightbox-overlay img{max-width:100%;max-height:100%;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
 .lightbox-close{position:fixed;top:20px;right:28px;color:var(--paper);font-family:var(--font-display);font-size:2rem;background:none;border:none;cursor:pointer;z-index:1000;line-height:1}
+.lightbox-close:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
 
 
 /* ============================================================
@@ -230,17 +238,22 @@ body.dark-page .ridge svg path{fill:#1C2B37}
    dark signup band. Kit's own form styling is customized separately
    in the Kit dashboard (Forms > Design) to match the site's palette:
    berry #D1495B button, dark background, light text. */
-.signup-form.kit-embed{display:block;max-width:520px;margin:36px auto 0}
+.signup-form.kit-embed{display:block;max-width:520px;margin:36px auto 0;min-height:220px}
+/* min-height reserves space for the async-loaded Kit form so it
+   doesn't cause a layout shift when the script injects it after
+   the rest of the page has already rendered. Adjust this number
+   once you can see the real rendered form height on the live site;
+   this sandbox can't reach kit.com to measure it directly. */
 .signup-form.kit-embed .formkit-form{background:transparent!important}
 
 /* hero split layout with large logo mark */
 .hero-split{display:flex;align-items:center;gap:56px;justify-content:space-between}
 .hero-text{flex:1;min-width:0}
-.hero-logo{flex-shrink:0;width:460px}
-.hero-logo img{width:100%;height:auto;opacity:.94}
+.hero-logo{flex-shrink:0;width:180px}
+.hero-logo img{width:100%;height:auto;aspect-ratio:525/700;opacity:.94}
 @media (max-width:900px){
   .hero-split{flex-direction:column;align-items:flex-start;gap:32px}
-  .hero-logo{width:260px;order:-1;align-self:center}
+  .hero-logo{width:150px;order:-1;align-self:center}
 }
 
 /* ============================================================
@@ -255,7 +268,7 @@ body.dark-page .ridge svg path{fill:#1C2B37}
   transition:all .16s ease;white-space:nowrap;
 }
 .tab-btn:hover{border-color:var(--ink-soft)}
-.tab-btn.active{background:var(--berry);border-color:var(--berry);color:var(--paper)}
+.tab-btn.active{background:var(--berry-a11y);border-color:var(--berry-a11y);color:var(--paper)}
 .tab-btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
 .tab-panels{padding-top:8px}
@@ -272,6 +285,11 @@ body.dark-page .ridge svg path{fill:#1C2B37}
 /* Design panel's nested mini sub-tab bar (smaller, inline, not sticky) */
 .tab-bar.sub{padding:0;gap:8px}
 .tab-btn.sub{padding:8px 16px;font-size:.85rem;background:var(--paper-mid);border-color:var(--line)}
-.tab-btn.sub.active{background:var(--berry);border-color:var(--berry);color:var(--paper)}
+.tab-btn.sub.active{background:var(--berry-a11y);border-color:var(--berry-a11y);color:var(--paper)}
 .tab-panel.sub{padding:36px 0 0}
 .tab-panel.sub .wrap{padding:0}
+
+/* Secondary-page headers (Services, Portfolio, BG Petty, work pages)
+   run slightly smaller than the hero h1 so their typically-longer
+   phrases have a better chance of resolving to a clean line break. */
+.page-hero h1{font-size:clamp(2.1rem,4.4vw,3rem)}
