@@ -242,3 +242,36 @@ body.dark-page .ridge svg path{fill:#1C2B37}
   .hero-split{flex-direction:column;align-items:flex-start;gap:32px}
   .hero-logo{width:260px;order:-1;align-self:center}
 }
+
+/* ============================================================
+   PORTFOLIO PAGE — tab bar + panels
+   ============================================================ */
+.tab-bar-wrap{background:var(--paper-mid);border-bottom:1px solid var(--line);position:sticky;top:65px;z-index:40}
+.tab-bar{display:flex;flex-wrap:wrap;gap:10px;padding:18px 0}
+.tab-btn{
+  font-family:var(--font-display);font-weight:600;font-size:.92rem;
+  padding:10px 18px;border-radius:999px;border:2px solid var(--line);
+  background:var(--paper);color:var(--ink);cursor:pointer;
+  transition:all .16s ease;white-space:nowrap;
+}
+.tab-btn:hover{border-color:var(--ink-soft)}
+.tab-btn.active{background:var(--berry);border-color:var(--berry);color:var(--paper)}
+.tab-btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.tab-panels{padding-top:8px}
+.tab-panel{display:none;padding:56px 0}
+.tab-panel.active{display:block}
+.tab-panel:nth-of-type(even){background:var(--paper-mid)}
+
+@media (max-width:700px){
+  .tab-bar-wrap{position:static}
+  .tab-bar{gap:8px}
+  .tab-btn{padding:9px 14px;font-size:.86rem}
+}
+
+/* Design panel's nested mini sub-tab bar (smaller, inline, not sticky) */
+.tab-bar.sub{padding:0;gap:8px}
+.tab-btn.sub{padding:8px 16px;font-size:.85rem;background:var(--paper-mid);border-color:var(--line)}
+.tab-btn.sub.active{background:var(--berry);border-color:var(--berry);color:var(--paper)}
+.tab-panel.sub{padding:36px 0 0}
+.tab-panel.sub .wrap{padding:0}

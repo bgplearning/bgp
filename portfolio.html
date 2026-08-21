@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instructional Design Portfolio — BGP Learning</title>
-<meta name="description" content="Instructional design portfolio from BGP Learning: Canvas and Blackboard course builds, media production, and course materials.">
+<title>Portfolio — BGP Learning</title>
+<meta name="description" content="Instructional design, writing, graphic design, and presentation work from BGP Learning, spanning Canvas and Blackboard builds, media production, and creative writing.">
 <link rel="icon" type="image/png" href="images/bgp-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,8 +17,7 @@
     <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks" onclick="const l=document.getElementById('navlinks');this.setAttribute('aria-expanded',l.classList.toggle('open'));">&#9776;</button>
     <ul class="nav-links" id="navlinks">
       <li><a href="services.html">Services</a></li>
-      <li><a href="content.html">Content</a></li>
-      <li><a class="active" href="portfolio.html">ID Portfolio</a></li>
+      <li><a class="active" href="portfolio.html">Portfolio</a></li>
       <li><a href="simulation.html">AI Simulation</a></li>
       <li><a href="bgpetty.html">BG Petty</a></li>
       <li><a class="btn btn-primary" href="index.html#contact" style="padding:10px 18px;font-size:.9rem">Get in touch</a></li>
@@ -29,22 +28,33 @@
 <main>
 <section class="page-hero">
   <div class="wrap">
-    <span class="eyebrow">Instructional Design Portfolio</span>
+    <span class="eyebrow">Portfolio</span>
     <h1>Learning Designed for the Learner</h1>
-    <p class="lede">We design, build, and implement the learning experience ourselves, from full LMS courses to the videos, media, and materials inside them. Our work spans multiple LMS platforms, degree programs, and corporate training alike.</p>
-    <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="lede">We design, build, and implement the learning experience ourselves, from full LMS courses to the videos, media, and materials inside them, alongside the writing, design, and presentations that carry our work everywhere else. Pick a category below to see it.</p>
+    <div class="dots lg center" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   </div>
 </section>
 <div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path fill="#F0EBE0" d="M0,35 C240,10 460,52 720,32 C980,12 1180,48 1440,28 L1440,60 L0,60 Z"/></svg></div>
 
-<!-- ===================== INTERACTIVE & COURSE MATERIALS (Wix-era + workbook) ===================== -->
-<section class="band alt" id="materials" style="padding-top:48px">
+<div class="tab-bar-wrap">
   <div class="wrap">
-    <span class="eyebrow">Interactive Learning &amp; Course Materials</span>
-    <h2>Sample Artifacts</h2>
+    <div class="tab-bar" role="tablist" aria-label="Portfolio categories">
+      <button class="tab-btn active" data-group="main" data-tab="materials">Learning Artifacts</button>
+      <button class="tab-btn" data-group="main" data-tab="courses">Custom Course Builds</button>
+      <button class="tab-btn" data-group="main" data-tab="design">Design</button>
+      <button class="tab-btn" data-group="main" data-tab="writing">(copy)Writing</button>
+    </div>
+  </div>
+</div>
+
+<div class="tab-panels">
+<div class="tab-panel active" data-group="main" id="panel-materials" data-panel="materials">
+  <div class="wrap">
+<span class="eyebrow">Interactive Learning &amp; Course Materials</span>
+    <h2>Learning Artifacts</h2>
     <div class="card-grid">
       <article class="card">
-        <div class="card-thumb"></div>
+        <div class="card-thumb"><img data-lightbox src="images/rise-critical-response.jpg" alt="Critical Response Process in Corporate Quality Assurance course title screen, showing a team collaborating around a laptop"></div>
         <div class="card-body">
           <span class="tag">Articulate Rise · Corporate</span>
           <h3>Critical Response Process for Corporate QA</h3>
@@ -53,7 +63,7 @@
         </div>
       </article>
       <article class="card">
-        <div class="card-thumb"></div>
+        <div class="card-thumb"><img data-lightbox src="images/peardeck-punctuation.jpg" alt="Playing With Punctuation title screen, demystifying the semicolon, illustrated with playful classroom doodles"></div>
         <div class="card-body">
           <span class="tag">Pear Deck · Micro-learning</span>
           <h3>Playing With Punctuation</h3>
@@ -62,7 +72,7 @@
         </div>
       </article>
       <article class="card">
-        <div class="card-thumb"></div>
+        <div class="card-thumb"><img data-lightbox src="images/course-map-excerpt.jpg" alt="Digital Marketing course map excerpt, showing course learning objectives and module-level lesson objectives with standards mapping"></div>
         <div class="card-body">
           <span class="tag">Curriculum mapping</span>
           <h3>Digital Marketing Course Map</h3>
@@ -80,13 +90,11 @@
     </div>
     <p style="margin-top:36px"><a class="btn btn-primary" href="index.html#contact">See something you like? Let's talk.</a></p>
   </div>
-</section>
+</div>
 
-<!-- ===================== CANVAS / ALVERNIA (leads — newest, strongest) ===================== -->
-<div class="dots center lg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-<section class="band" id="canvas">
+<div class="tab-panel" data-group="main" id="panel-courses" data-panel="courses">
   <div class="wrap">
-    <span class="eyebrow">Canvas · Graduate Course Builds</span>
+<span class="eyebrow">Canvas · Graduate Course Builds</span>
     <h2>Custom Course Templates and Builds</h2>
     <p class="lede">A sequence of graduate education courses built for Alvernia University's TExpL&reg; Institute (Total Experience Learning), each with a custom homepage, structured modules, and supporting visuals for the framework itself.</p>
     <div class="card-grid">
@@ -103,15 +111,8 @@
         <div class="card-body"><span class="tag">Framework visualization</span><h3>Translating the TExpL&reg; framework into a scannable visual.</h3></div>
       </article>
     </div>
-  </div>
-</section>
-
-<!-- ===================== BLACKBOARD (genericized per your ruling) ===================== -->
-<div class="dots center lg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-<section class="band alt" id="blackboard">
-  <div class="wrap">
-    <span class="eyebrow">Blackboard · Template Systems</span>
-    <h2>Built to Be Reused</h2>
+    <div style="margin:48px 0;border-top:1px solid var(--line)"></div>
+    <h3 style="margin-bottom:16px">Blackboard: Built to Be Reused</h3>
     <div class="card-grid">
       <article class="card">
         <div class="card-thumb"><img src="images/blackboard-template.png" alt="Blackboard sample module template with objectives structure and task table"></div>
@@ -127,13 +128,19 @@
       </article>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ===================== MEDIA PRODUCTION ===================== -->
-<div class="dots center lg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-<section class="band" id="media">
+<div class="tab-panel" data-group="main" id="panel-design" data-panel="design">
   <div class="wrap">
-    <span class="eyebrow">Media Production</span>
+<span class="eyebrow">Design</span>
+    <div class="tab-bar sub" role="tablist" aria-label="Design categories" style="margin:20px 0 8px">
+      <button class="tab-btn sub active" data-group="design-sub" data-tab="video">Video</button>
+      <button class="tab-btn sub" data-group="design-sub" data-tab="graphics">Graphic Design</button>
+      <button class="tab-btn sub" data-group="design-sub" data-tab="pres">Presentations</button>
+    </div>
+
+    <div class="tab-panel sub active" data-group="design-sub" data-panel="video">
+<span class="eyebrow">Media Production</span>
     <h2>Written, Illustrated, and Produced Solo</h2>
     <div class="video-grid">
       <div class="video-item">
@@ -147,8 +154,121 @@
         <p>A companion piece in the WOLFIE Writers series, also written, illustrated, and produced solo.</p>
       </div>
     </div>
+    </div>
+    <div class="tab-panel sub" data-group="design-sub" data-panel="graphics">
+<span class="eyebrow">Graphic Design</span>
+    <h2>Content Chameleon</h2>
+    <h3 style="margin-bottom:24px">Cynically Optimistic: The Complete Suite</h3>
+    <div class="feature-grid">
+      <div style="max-width:360px">
+        <img data-lightbox src="images/co-cover.png" alt="Cynically Optimistic book cover, a cracked glass half full of water on a deep blue background" style="border-radius:8px;box-shadow:0 18px 40px rgba(0,61,91,.18);transform:rotate(-1.5deg);cursor:zoom-in">
+      </div>
+      <div class="feature-copy">
+        <div style="display:flex;gap:16px;align-items:center;margin-bottom:16px">
+          <img src="images/co-pin.png" alt="Enamel pin, cracked glass half full" style="width:104px;height:104px;object-fit:contain;background:var(--paper-mid);border-radius:50%;padding:14px;flex-shrink:0">
+          <p style="margin:0">Enamel pin, extending the cracked-glass motif</p>
+        </div>
+        <div style="display:flex;gap:16px;align-items:center;margin-bottom:16px">
+          <img src="images/co-sticker.png" alt="QR sticker, companion piece" style="width:104px;height:104px;object-fit:contain;background:var(--paper-mid);border-radius:8px;padding:14px;flex-shrink:0">
+          <p style="margin:0">QR sticker, a companion piece to the pin</p>
+        </div>
+        <p>Cover design, interior layout, and companion merch, built as one cohesive visual system for a published poetry collection.</p>
+      </div>
+    </div>
+    <div style="margin:40px 0;border-top:1px solid var(--line)"></div>
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-thumb contain"><img src="images/edtok-logo.png" alt="EdTok app logo, white line-art graduation cap in a black circle with offset yellow and green rings"></div>
+        <div class="card-body">
+          <span class="tag">App brand identity</span>
+          <h3>EdTok</h3>
+          <p>Brand identity for EdTOK, the edtech venture we co-founded.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-thumb contain"><img src="images/crb2-logo.png" alt="The CRB2 Foundation logo, embroidered-texture letters in a hand-drawn DNA motif ring"></div>
+        <div class="card-body">
+          <span class="tag">Nonprofit identity</span>
+          <h3>The CRB2 Foundation</h3>
+          <p>The CRB2 Foundation is a federally recognized 501(c)(3) nonprofit providing community and education for families touched by the Crumbs family of diseases.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-thumb contain"><img src="images/bbb-logo.png" alt="Buffalo Bookish Babes badge logo, buffalo with a heart, serif and script type, rose and brown palette"></div>
+        <div class="card-body">
+          <span class="tag">Community badge</span>
+          <h3>Buffalo Bookish Babes</h3>
+          <p>A woman-owned business that plans "bookish" events and gatherings for the Buffalo community.</p>
+        </div>
+      </article>
+    </div>
+    </div>
+    <div class="tab-panel sub" data-group="design-sub" data-panel="pres">
+<span class="eyebrow">Presentations</span>
+    <h2>Engaging Visual Rhetoric</h2>
+    <div class="card-grid two">
+      <article class="card">
+        <div class="card-thumb"><img src="images/deck-escape.jpg" alt="Slide from the Canvas Escape Room deck: 'Why this works' with colorful dominoes and gamification psychology text"></div>
+        <div class="card-body">
+          <span class="tag">Faculty PD workshop</span>
+          <h3>Building a Canvas Escape Room</h3>
+          <p>A faculty PD session on the psychology of gamification, including a step-by-step method for building your own Canvas escape room.</p>
+          </div>
+      </article>
+      <article class="card">
+        <div class="card-thumb"><img src="images/deck-gagne.jpg" alt="Slide from The Story of Learning deck: a comic-style speech bubble reading '02 Inform Learners of the Objectives'"></div>
+        <div class="card-body">
+          <span class="tag">Teaching demonstration</span>
+          <h3>The Story of Learning: Gagné's 9 Events</h3>
+          <p>A teaching demonstration that walks through Gagn&eacute;'s Nine Events of Instruction by performing them on the audience as it goes.</p>
+          </div>
+      </article>
+      <!-- [MORE PRESENTATIONS coming? Copy a card block.] -->
+    </div>
+    </div>
   </div>
-</section>
+</div>
+
+<div class="tab-panel" data-group="main" id="panel-writing" data-panel="writing">
+  <div class="wrap">
+<span class="eyebrow">Writing</span>
+    <h2>We write things. All kinds of things.</h2>
+    <div class="text-list">
+      <div class="list-row">
+        <span class="tag">Book chapter &middot; Palgrave</span>
+        <h3>"All Our World on Stage"</h3>
+        <p>A chapter on multimodal writing pedagogy, co-authored with Christopher Petty, published in Palgrave's Teaching Writing Across Theatre and Performance Studies.</p>
+        <a class="card-link" href="work/all-our-world-on-stage.html">About the chapter &rarr;</a>
+      </div>
+      <div class="list-row">
+        <span class="tag">Poetry collection</span>
+        <h3>Cynically Optimistic</h3>
+        <p>A collection of poetry that finds hope tangled up with dread, published under our imprint Aspen &amp; Olive.</p>
+        <a class="card-link" href="bgpetty.html">The full collection &rarr;</a>
+      </div>
+      <div class="list-row">
+        <span class="tag">Personal essay</span>
+        <h3>When I Was Asked What's 'Wrong' With My Son With a Disability</h3>
+        <p>A personal essay on disability stigma, language, and parenting a child with a rare disease.</p>
+        <a class="card-link" href="https://themighty.com/topic/rare-disease/whats-wrong-child-disability-rare-prnt/">Read on The Mighty &rarr;</a>
+      </div>
+      <div class="list-row">
+        <span class="tag">Theatre review &middot; Texas Theatre Journal</span>
+        <h3>In With the Old</h3>
+        <p>A review of Bill Irwin and David Shiner's <em>Old Hats</em> at the Signature Theatre, published in Volume 10 of the Texas Theatre Journal.</p>
+        <a class="card-link" href="files/in-with-the-old.pdf">Read the essay (PDF) &rarr;</a>
+      </div>
+      <div class="list-row">
+        <span class="tag">Blog</span>
+        <h3>Mementos</h3>
+        <p>A blog post on preserving wedding keepsakes through handmade paper craft, for Papercraft Miracles.</p>
+        <a class="card-link" href="https://www.papercraftmiracles.com/blog/mementos/5/16/2019">Read &rarr;</a>
+      </div>
+      <!-- [ADD MORE WRITING CARDS — copy a card block above. Substack essays could live here too, or stay on BG Petty. QUESTION: does professional writing (this page) vs. creative writing (BG Petty) split cleanly for you?] -->
+    </div>
+  </div>
+</div>
+</div>
 </main>
 
 <footer>
@@ -156,20 +276,20 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="logo" href="index.html" style="color:var(--paper)"><img src="images/bgp-logo.png" alt="" style="height:40px">BGP<span>&nbsp;Learning</span></a>
-        <p>Engaging instructional design and memorable learning experiences.</p>
+        <p>Where ideas become learning experiences.</p>
       </div>
       <ul class="foot-links">
         <li><a href="services.html">Services</a></li>
-        <li><a href="content.html">Content</a></li>
-        <li><a href="portfolio.html">ID Portfolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="simulation.html">AI Simulation</a></li>
         <li><a href="bgpetty.html">BG Petty</a></li>
         <li><a href="mailto:becky@bgplearning.com">Contact</a></li>
       </ul>
     </div>
-    <div class="foot-legal"><span>© 2026 BGP Learning, LLC</span><span></span></div>
+    <div class="foot-legal"><span>&copy; 2026 BGP Learning, LLC</span><span></span></div>
   </div>
 </footer>
 <script src="lightbox.js"></script>
+<script src="tabs.js"></script>
 </body>
 </html>

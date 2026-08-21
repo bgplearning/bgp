@@ -21,8 +21,8 @@
     <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks" onclick="const l=document.getElementById('navlinks');this.setAttribute('aria-expanded',l.classList.toggle('open'));">&#9776;</button>
     <ul class="nav-links" id="navlinks">
       <li><a href="../services.html">Services</a></li>
-      <li><a href="../content.html">Content</a></li>
-      <li><a href="../portfolio.html">ID Portfolio</a></li>
+      
+      <li><a href="../portfolio.html">Portfolio</a></li>
       <li><a href="../simulation.html">AI Simulation</a></li>
       <li><a href="../bgpetty.html">BG Petty</a></li>
       <li><a class="btn btn-primary" href="../index.html#contact" style="padding:10px 18px;font-size:.9rem">Get in touch</a></li>
@@ -33,11 +33,15 @@
 <main>
 <section class="page-hero">
   <div class="wrap">
-    <a class="backlink" href="../content.html#writing">← Back to Content</a>
+    <a class="backlink" href="../portfolio.html#panel-writing">← Back to Portfolio</a>
     <span class="eyebrow" style="margin-top:20px">Published chapter · Palgrave Macmillan</span>
     <h1>"All Our World on Stage"</h1>
     <p class="lede">Developing Multimodal Writing Skills through Asynchronous Collaborative Performance Projects</p>
     <p style="margin-top:14px;font-family:var(--font-mono);font-size:.85rem;color:var(--teal)">Becky Goldberg Petty &amp; Christopher Petty · in <em>Teaching Writing Across Theatre and Performance Studies: A Resource Guide</em> (eds. Yates &amp; Higgins), Palgrave Studies in Theatre and Performance History</p>
+    <p style="margin-top:24px;display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+      <span style="display:inline-block;font-family:var(--font-mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--paper-mid);border:1px solid var(--line);border-radius:999px;padding:8px 18px">OER coming soon</span>
+      <a class="btn btn-ghost" href="https://link.springer.com/book/9783032246066" style="padding:8px 18px;font-size:.85rem">View on Springer</a>
+    </p>
     <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   </div>
 </section>
@@ -62,6 +66,21 @@
   </div>
 </section>
 
+<section class="band">
+  <div class="wrap">
+    <span class="eyebrow">Cite This Chapter</span>
+    <h2 style="margin-bottom:24px">MLA Citation</h2>
+    <div id="mla-citation" style="background:var(--paper-mid);border:1px solid var(--line);border-radius:8px;padding:24px 28px;max-width:640px;font-family:var(--font-mono);font-size:.92rem;line-height:1.7">Petty, Becky Goldberg, and Christopher Petty. "All Our World on Stage: Developing Multimodal Writing Skills through Asynchronous Collaborative Performance Projects." <em>Teaching Writing Across Theatre and Performance Studies: A Resource Guide</em>, edited by Samuel Yates and Jeanmarie Higgins, Palgrave Macmillan, 2026<span class="todo">[PAGE RANGE — add once known, e.g. ", pp. 45-58." Not yet confirmed, so left as a placeholder rather than guessed.]</span>.</div>
+    <button class="btn btn-ghost" style="margin-top:16px" onclick="
+      const el=document.getElementById('mla-citation');
+      const text=el.innerText.replace('[PAGE RANGE — add once known, e.g. \', pp. 45-58.\' Not yet confirmed, so left as a placeholder rather than guessed.]','');
+      navigator.clipboard.writeText(text);
+      this.textContent='Copied!';
+      setTimeout(()=>{this.textContent='Copy citation'},1800);
+    ">Copy citation</button>
+  </div>
+</section>
+
 <!-- PATTERN NOTE: this page is the template for future /work/ detail pages.
      Copy this file, change title/meta/hero/content, link it from a card.
      Candidates: alvernia-canvas-builds.html, canvas-escape-room.html, NSD case studies. -->
@@ -72,12 +91,12 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="logo" href="../index.html" style="color:var(--paper)"><img src="../images/bgp-logo.png" alt="" style="height:40px">BGP<span>&nbsp;Learning</span></a>
-        <p>Engaging instructional design and memorable learning experiences.</p>
+        <p>Where ideas become learning experiences.</p>
       </div>
       <ul class="foot-links">
         <li><a href="../services.html">Services</a></li>
-        <li><a href="../content.html">Content</a></li>
-        <li><a href="../portfolio.html">ID Portfolio</a></li>
+        
+        <li><a href="../portfolio.html">Portfolio</a></li>
         <li><a href="../simulation.html">AI Simulation</a></li>
         <li><a href="../bgpetty.html">BG Petty</a></li>
         <li><a href="mailto:bgplearning@gmail.com">Contact</a></li>
